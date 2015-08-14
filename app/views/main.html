@@ -1,0 +1,86 @@
+<section class="agent-entry-form pull-left" ng-controller="AddAgentFormCtrl">
+
+  <h1>Please enter agent info here</h1>
+
+  <form action="#" class="form-inline" role="form">
+    <ul>
+      <li>
+        <div class="form-group">
+          <label for="id">id</label>
+          <input type="text" class="form-control" id="id" ng-model="agent.id" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" ng-model="name" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="agency">Agency</label>
+          <input type="text" class="form-control" id="agency" ng-model="agency" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="tel">Tel</label>
+          <input type="text" class="form-control" id="tel" ng-model="tel" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label class="pull-left" for="email">Email</label>
+          <div class="input-group pull-right">
+            <div class="input-group-addon">@</div>
+            <input type="email" class="form-control" id="email" ng-model="email" />
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="calledon">Called on/at</label>
+          <input type="text" class="form-control" id="calledon" ng-model="calledon" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" class="form-control" id="role" ng-model="role.name" />
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <label for="role-info">Role Info</label>
+          <textarea class="form-control" id="role-info" ng-model="role.info" ></textarea>
+        </div>
+      </li>
+      <li>
+        <div class="form-group add-btn-group">
+          <input type="submit" class="btn btn-primary pull-right" value="Add Agent" />
+        </div>
+      </li>
+    </ul>
+  </form>
+
+</section>
+
+<section class="list-panel-home pull-right">
+  <article class="list-panel" ng-controller="AgentsCtrl">
+    <ul class="agents-list" ng-repeat="agent in agentsList">
+      <li class="agent">
+        <h3>{{agent.role.name}}</h3>
+        <h4>{{agent.name}}</h4>
+        <h5>{{agent.agency}}</h5>
+        <p>{{agent.tel}} | <a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
+
+        <p>{{agent.calledon}}</p>
+
+        <a class="more-details" href="#/agents/{{agent.id}}">More details</a>
+
+      </li>
+    </ul>
+  </article>
+</section>
+
+

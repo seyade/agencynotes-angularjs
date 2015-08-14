@@ -1,0 +1,14 @@
+<article class="list-panel" ng-controller="AgentsCtrl">
+	<ul class="agents-list" ng-repeat="agent in agentsList">
+		<li>
+			<div class="agent">
+				<h3>{{agent.role.name}}</h3>
+				<h4>{{agent.name}}</h4>
+				<h5>{{agent.agency}}</h5>
+				<p>{{agent.tel}} | <a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
+
+				<a class="more-details" href="#/agents/{{agent.id}}">More details</a>
+			</div>	
+		</li>
+	</ul>
+</article>

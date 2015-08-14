@@ -1,0 +1,26 @@
+<article class="agent-details" ng-model="agentsList">
+
+	<section class="role-info">
+		<h2>More about the role</h2>
+		<p>{{agentsList[itemId].role.name}}</p>
+		<p>{{agentsList[itemId].role.info}}</p>
+		<p>Status: {{agentsList[itemId].role.status}}</p>
+	</section>
+	
+	<section class="agent-info">
+		<h2>Agent info</h2>
+		<h3>{{agentsList[itemId].name}}</h3>
+		<h4>{{agentsList[itemId].agency}}</h4>
+		<p>{{agentsList[itemId].tel}} | <a href="mailto:{{agentsList[itemId].email}}">{{agentsList[itemId].email}}</a></p>
+
+		<p>{{agentsList[itemId].calledon}}</p>
+	</section>
+
+	<div class="controls">
+		<a href="#/agents/{{prevAgent}}">Prev</a>
+		<a href="#/agents/{{nextAgent}}">Next</a>
+	</div>
+
+	<a href="#/agents">Agents list</a>
+
+</article>
