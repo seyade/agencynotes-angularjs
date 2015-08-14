@@ -10,7 +10,6 @@ The app uses:
 * CSS3 / Sass 
 * A bit of Bootstrap
 * Angularjs
-* Require
 * LocalStorage
 * Yeoman (Node, Bower, Grunt, etc...)
 * Unit test with Karma and Jasmine
